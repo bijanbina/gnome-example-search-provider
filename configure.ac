@@ -46,7 +46,6 @@ PKG_CHECK_MODULES(SEARCH_EXAMPLE,
 AC_CONFIG_FILES([
 Makefile
 src/Makefile
-src/gnome-search-example.desktop.in
 ])
 
 AC_OUTPUT

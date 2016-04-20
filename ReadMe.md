@@ -52,4 +52,5 @@ These changes are applied on top of official repository [2].
 Both feedbacks and contributions are appreciated. Please put any comment in repository pull-requests and I will check it ASAP.
 
 [1] https://developer.gnome.org/shell/unstable/gdbus-org.gnome.Shell.SearchProvider2.html
+
 [2] https://github.com/cosimoc/gnome-example-search-provider

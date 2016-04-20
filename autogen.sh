@@ -4,7 +4,6 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME="GNOME Search Example"
 
 (test -f $srcdir/configure.ac) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
@@ -17,4 +16,4 @@ which gnome-autogen.sh || {
     exit 1
 }
 
-USE_GNOME2_MACROS=1 . gnome-autogen.sh
+ . gnome-autogen.sh

@@ -29,10 +29,8 @@ gnome_search_example_SOURCES = \
 	$(NULL)
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-search-example.desktop.in
-desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+desktop_DATA = gnome-search-example.desktop
 
-@INTLTOOL_DESKTOP_RULE@
 
 searchproviderdir = $(datadir)/gnome-shell/search-providers
 searchprovider_DATA = search-example-provider.ini
@@ -44,12 +42,10 @@ service_in_files = org.gnome.SearchExample.SearchProvider.service.in
 org.gnome.SearchExample.SearchProvider.service: org.gnome.SearchExample.SearchProvider.service.in Makefile
 	$(AM_V_GEN) sed -e "s|\@bindir\@|$(bindir)|" $< > $@
 
-CLEANFILES = \
-	$(desktop_in_files) \
-	$(desktop_DATA) \
-	$(NULL)
 
 EXTRA_DIST = \
-	gnome-search-example.desktop.in.in \
+	$(desktop_DATA) \
 	$(searchprovider_DATA) \
 	$(NULL)
+	
+#gnome-search-example.desktop.in 

@@ -9,7 +9,6 @@ get_result_set (void)
   g_variant_builder_add (&builder, "s", "result1");
   g_variant_builder_add (&builder, "s", "result2");
 	
-    
   return g_variant_new ("(as)", &builder);
 }
 
@@ -163,10 +162,7 @@ static void
 search_provider_app_dispose (GObject *obj)
 {
   SearchExampleProviderApp *self = SEARCH_EXAMPLE_PROVIDER_APP (obj);
-  
-  g_print ("****** Get To dispose rid of %d\n", g_application_get_inactivity_timeout (G_APPLICATION(obj)));
-  
-  
+
   if (self->name_owner_id != 0) {
     g_bus_unown_name (self->name_owner_id);
     self->name_owner_id = 0;

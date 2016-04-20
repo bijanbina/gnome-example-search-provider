@@ -36,4 +36,20 @@ binding, avoids any licensing issues due to linking and gives the
 maximum freedom to the provider implementation on how to present
 activated results, while keeping the overall architecture easy to use.
 
+### Upgrading To Gnome 3.20
+These changes are applied on top of official repository [2].
+- make the example as minimal as possible
+- remove support for translation (it causes many problem and getting away from the minimal concept)
+- remove `g_type_init` (it is deprecated now)
+- remove automatic desktop file generate
+- make example more object oriented by creating header files
+- remove ` -USE_GNOME2_MACROS=1` and `PKG_NAME` in autogen.sh (deprecated)
+- change all call back to return gboolean instead of void
+	this cause  `(gnome-search-example:29658): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed`
+	
+	
+### Contribution
+Both feedbacks and contributions are appreciated. Please put any comment in repository pull-requests and I will check it ASAP.
+
 [1] https://developer.gnome.org/shell/unstable/gdbus-org.gnome.Shell.SearchProvider2.html
+[2] https://github.com/cosimoc/gnome-example-search-provider
